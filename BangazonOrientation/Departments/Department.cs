@@ -17,6 +17,21 @@ namespace BangazonOrientation
             _employee_Count = employees;
 
         }
+
+        public void Pay()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Hire()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Fire()
+        {
+            throw new NotImplementedException();
+        }
     }
    
 }

@@ -11,6 +11,7 @@ namespace BangazonOrientation
             List<Department> departments = new List<Department>();
 
             HumanResources hr = new HumanResources("HR", "Amy Shumer", 2);
+            //Sales sales = new Sales("sales", "Frank Lloyd Wright", 14);
 
             departments.Add(hr);
             foreach (Department d in departments)

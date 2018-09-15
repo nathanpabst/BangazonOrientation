@@ -16,6 +16,8 @@ namespace BangazonOrientation.Departments
         {
 
         }
+
+        
         public void AddPolicy(string title, string text)
         {
             _policies.Add(title, text);
