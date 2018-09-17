@@ -8,16 +8,11 @@ namespace BangazonOrientation
     {
         static void Main(string[] args)
         {
-            List<Department> departments = new List<Department>();
+            Department departments = new Department("Human Resources", "Amy Shumer", 42);
 
-            HumanResources hr = new HumanResources("HR", "Amy Shumer", 2);
-            //Sales sales = new Sales("sales", "Frank Lloyd Wright", 14);
+            Console.WriteLine(departments.ToString());
 
-            departments.Add(hr);
-            foreach (Department d in departments)
-            {
-                Console.WriteLine($"{d.ToString()}");
-            }
+            
 
             Console.ReadLine();
         }

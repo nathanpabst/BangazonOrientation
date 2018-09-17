@@ -6,6 +6,13 @@ namespace BangazonOrientation
 {
     class Department
     {
+        private float hourlyRate;
+        private int hWorked;
+
+        public float TotalPay { get; protected set; }
+        public float BasicPay { get; private set; }
+        public string DepartmentName { get; private set; }
+
         private string _name;
         private string _supervisor;
         private int _employee_Count;
@@ -18,20 +25,21 @@ namespace BangazonOrientation
 
         }
 
-        public void Pay()
+        //public override string ToString()
+        //{
+        //    return $"{_name} {_supervisor} {_employee_Count}";
+        //}
+
+        public virtual void CalculatePayroll()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Calculating Payroll...");
+
+            BasicPay = hWorked * hourlyRate;
+            TotalPay = BasicPay * _employee_Count;
+
+
         }
 
-        public void Hire()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Fire()
-        {
-            throw new NotImplementedException();
-        }
     }
    
 }
