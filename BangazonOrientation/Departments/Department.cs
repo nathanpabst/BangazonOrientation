@@ -5,12 +5,7 @@ using System.Text;
 namespace BangazonOrientation
 {
     class Department
-    {
-        private float hourlyRate;
-        private int hWorked;
-
-        public float TotalPay { get; protected set; }
-        public float BasicPay { get; private set; }
+    {       
         public string DepartmentName { get; private set; }
 
         private string _name;
@@ -25,17 +20,14 @@ namespace BangazonOrientation
 
         }
 
-        //public override string ToString()
-        //{
-        //    return $"{_name} {_supervisor} {_employee_Count}";
-        //}
+        public override string ToString()
+        {
+            return $"Department Name: {_name} Supervisor: {_supervisor} Number of Employees {_employee_Count}";
+        }
 
         public virtual void CalculatePayroll()
         {
-            Console.WriteLine("Calculating Payroll...");
-
-            BasicPay = hWorked * hourlyRate;
-            TotalPay = BasicPay * _employee_Count;
+            
 
 
         }
