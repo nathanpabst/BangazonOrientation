@@ -8,7 +8,7 @@ namespace BangazonOrientation
     {
         static void Main(string[] args)
         {
-            var departments = new List<Department>();
+            var departments = new List<DepartmentBase>();
 
             var hr = new HumanResources("Human Resources", "Amy Shumer", 42);
 
@@ -16,7 +16,7 @@ namespace BangazonOrientation
             hr.AddTraining("How to Sell Stuff & Things", "Do it...Do it.");
             departments.Add(hr);
 
-            foreach(Department d in departments)
+            foreach(var d in departments)
             Console.WriteLine($"{d.ToString()}");
 
             

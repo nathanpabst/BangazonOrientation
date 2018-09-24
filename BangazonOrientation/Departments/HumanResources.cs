@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BangazonOrientation.Departments
 {
-    class HumanResources : Department
+    class HumanResources : DepartmentBase
     {
         
         public string Name { get; set; }
@@ -21,7 +21,7 @@ namespace BangazonOrientation.Departments
             _policies.Add(title, text);
             foreach (KeyValuePair<string, string> policy in _policies)
             {
-                Console.WriteLine($"{policy.Value}");
+                Console.WriteLine($"Our new policy: {policy.Value}");
             }
 
         }
@@ -31,13 +31,10 @@ namespace BangazonOrientation.Departments
             _training.Add(title, text);
             foreach (KeyValuePair<string, string> training in _training)
             {
-                Console.WriteLine($"{training.Value}");
+                Console.WriteLine($"Our new training session: {training.Value}");
             }
         }
 
-        public override string ToString()
-        {
-            return $"{Name} {Supervisor} {Employees}";
-        }
+        
     }
 }
